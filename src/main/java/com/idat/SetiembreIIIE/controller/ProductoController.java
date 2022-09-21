@@ -22,6 +22,11 @@ public class ProductoController {
 	@Autowired
 	private ProductoService service;
 	
+	
+	public String saludo() {
+		return "Hola";
+	}
+	
 	@RequestMapping(path="/listar", method=RequestMethod.GET)
 	public ResponseEntity<List<Producto>> listar(){
 		return new ResponseEntity<List<Producto>>(service.listar(), HttpStatus.OK);
