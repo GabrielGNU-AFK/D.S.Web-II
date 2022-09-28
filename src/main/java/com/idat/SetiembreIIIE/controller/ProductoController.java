@@ -24,6 +24,10 @@ public class ProductoController {
 	@Autowired
 	private ProductoService service;
 	
+	public String saludo2() {
+		return "Hola";
+	}
+	
 	
 
 	@RequestMapping(path="/listar", method=RequestMethod.GET)

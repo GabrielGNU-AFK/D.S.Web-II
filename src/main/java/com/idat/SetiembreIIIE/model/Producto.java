@@ -1,7 +1,19 @@
 package com.idat.SetiembreIIIE.model;
 
+import javax.annotation.Generated;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="productos")
 public class Producto {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idProducto;
 	private String nombreProducto;
 	private String descripcion;
@@ -10,6 +22,11 @@ public class Producto {
 	
 	
 	
+	
+	public Producto() {
+		super();
+	}
+
 	public Producto(Integer idProducto, String nombreProducto, String descripcion, Double precio, Integer stock) {
 		super();
 		this.idProducto = idProducto;
